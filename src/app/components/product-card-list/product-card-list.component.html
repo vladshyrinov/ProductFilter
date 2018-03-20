@@ -1,0 +1,5 @@
+<section class="product-card-list" *ngIf="products">
+    <app-product-card *ngFor="let product of products; let i = index" 
+    [product]="product" [index]="i+1">
+    </app-product-card>
+</section>

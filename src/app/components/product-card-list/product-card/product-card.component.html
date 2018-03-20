@@ -1,0 +1,36 @@
+<article class="product-card">
+
+  <div class="tariff-name">
+    <div class="tariff-position">
+      {{index}}
+    </div>
+    <h2 class="tariff-heading">{{product.product.content.text}}</h2>
+  </div>
+
+  <div class="speed-info">
+    <div class="speed-info-block">
+      <h3 class="speed-info-heading hd-mob">Download</h3>
+      <i class="fa fa-download"></i>
+      <span class="speed">{{product.contractTerm.downloadSpeed.amount / 1000}} Mbit/s</span>
+    </div>
+    <div class="speed-info-block">
+      <h3 class="speed-info-heading hd-mob">Upload</h3>
+      <i class="fa fa-upload"></i>
+      <span class="speed">{{product.contractTerm.uploadSpeed.amount / 1000}} Mbit/s</span>
+    </div>
+  </div>
+
+  <div class="tariff-benefit hd-mob hd-tab">
+    <ul class="benefit-list">
+      <li class="benefit-item" *ngFor="let benefit of product.remarks">{{benefit.caption.text}}</li>
+    </ul>
+  </div>
+
+  <div class="tariff-price">
+    <span class="price">{{product.cost.effectiveCost.content.text}}</span>
+    <a href="#" class="to-tariff">
+      <span class="hd-mob">zum Tarif ></span>
+      <span class="hd-tab hd-desk">></span>
+    </a>
+  </div>
+</article>

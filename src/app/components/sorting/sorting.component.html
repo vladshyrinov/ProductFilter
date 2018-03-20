@@ -1,0 +1,6 @@
+<section class="sorting">
+  <h2 class="sorting-heading">Sortierung: </h2>
+  <select (change)="onSelectChange($event.target.value)" class="sorting-options">
+    <option class="sorting-option" *ngFor="let option of options"  [value]="option.value">{{option.text}}</option>
+  </select>
+</section>

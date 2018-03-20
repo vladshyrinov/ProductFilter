@@ -1,0 +1,151 @@
+.product-card {
+    /*colors block*/
+    $black: #000000;
+    $black075: rgba(0,0,0,0.75);
+    $lightgray: #D3D3D3;
+    $dodgeblue: #1E90FF;
+    $white: #ffffff;
+    $midnightblue: 	#191970;
+    /*colors block END*/
+
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    min-height: 150px;
+    padding: 10px 20px 10px 0;
+    border: 1px solid $lightgray;
+    background-color: $white;
+    box-shadow: -1px 2px 3px $black075;
+
+    .tariff-name {
+        display: flex;
+        .tariff-position {
+            align-self: center;
+            text-align: center;
+            width: 20px;
+        }
+        .tariff-heading {
+            width: 200px;
+            font-size: 1.2em;
+            border-left: 1px solid $lightgray;
+            padding-left: 10px;
+        }
+    }
+
+    .speed-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        .speed-info-block {
+            .speed-info-heading {
+                font-size: 1.1em;
+            }
+        }
+    }
+
+    .tariff-benefit {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 200px;
+
+        .benefit-list {
+            .benefit-item {
+                margin-bottom: 5px;
+            }
+        }
+    }
+    
+    .tariff-price {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .price {
+            font-size: 1.5em;
+            font-weight: 700;
+        }
+
+        .to-tariff {
+            display: block;
+            width: 100px;
+            height: 40px;
+            line-height: 40px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: $dodgeblue;
+            color: $white;
+            transition: background-color 0.5s;
+
+            &:hover {
+                background-color: $midnightblue;
+            }
+        }
+    }
+
+    /* Tablet styles */
+    @media(max-width: 768px) {
+
+        .tariff-name {
+            .tariff-position {
+                align-self: flex-start;
+            }
+            .tariff-heading {
+                width: 150px;
+                border: none;
+            }
+        }
+    }
+    /* Tablet styles END*/
+
+
+    /* Mobile styles */
+    @media(max-width: 426px) {
+        min-height: 90px;
+
+        .tariff-name {
+            .tariff-heading {
+                font-size: 0.9em;
+                width: 100px;
+                margin-left: 0;
+                padding-left: 5px;
+            }
+        }
+
+        .speed-info {
+            justify-content: flex-start;
+            margin-left: 5px;
+
+            .speed-info-block {
+                
+                &:first-child {
+                    margin-bottom: 10px;
+                }
+
+                .speed {
+                    font-size: 0.8em;
+                }
+            }
+        }
+        
+        .tariff-price {
+            flex-direction: row;
+    
+            .price {
+                min-width: 55px;
+                margin-right: 5px;
+                font-size: 1em;
+            }
+    
+            .to-tariff {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 20px;
+            }
+        }
+    }
+    /* Mobile styles END*/
+}
