@@ -8,7 +8,7 @@ import { DataService } from '../../services/data.service';
   styleUrls: ['./product-card-list.component.scss']
 })
 export class ProductCardListComponent implements OnInit {
-  products: Array<Object> = null;
+  products: Array<any> = null;
 
   constructor(
     private productService: ProductService,

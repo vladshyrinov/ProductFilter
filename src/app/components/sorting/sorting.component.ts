@@ -8,7 +8,7 @@ import { options } from './sorting-options';
   styleUrls: ['./sorting.component.scss']
 })
 export class SortingComponent implements OnInit {
-  options: Array<Object> = options;  
+  options: Array<any> = options;  
 
   constructor(private dataService: DataService) { }
 
