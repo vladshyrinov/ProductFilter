@@ -7,4 +7,4 @@
 3. Download or git clone the project
 4. Open CMD in the root folder of the project 
 5. "npm install" or "yarn" in CMD - to download dependencies
-6. "npm run start" or "yarn start" - to launch the project (it will be opened on localhost:4200)
+6. "npm run start-dev" or "yarn start-dev" - to launch the project (it will be opened on localhost:4200)
